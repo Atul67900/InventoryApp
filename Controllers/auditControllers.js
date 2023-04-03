@@ -11,7 +11,7 @@ exports.auditpost = async(req,res)=>{
         res.status(401).json("All Inputs are Required")
     }
     try {
-        const datecreated = moment(new Date()).format("YYYY-MM-DD hh:mm:ss")
+        const datecreated = moment(new Date()).format("YYYY-MM-DD hh:mm:ss A")
 
         const auditData = new audit({
             productname, productcode, qiqty, productsku, remquantity, productbin, datecreated
